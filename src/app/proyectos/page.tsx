@@ -50,7 +50,7 @@ export default function ProyectosPage() {
 
       <Grid container spacing={4}>
         {researchProjects.map((project) => (
-          <Grid item xs={12} sm={6} md={4} key={project.id}>
+          <Grid item xs={12} sm={6} md={4} key={project.id} component="div">
             <Card
               sx={{
                 height: '100%',
