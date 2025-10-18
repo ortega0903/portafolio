@@ -59,7 +59,7 @@ export default function Home() {
           <h2 className="text-2xl font-mono font-bold mb-4 text-green-400 text-center lg:text-left">
             {'>'} HABILIDADES
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2">
             <span className="px-3 py-2 bg-gray-800/60 text-cyan-300 text-xs font-mono text-center border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-200">
               Node.js
             </span>
