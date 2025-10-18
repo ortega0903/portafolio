@@ -15,7 +15,7 @@ export default function ProyectosPage() {
       id: 2,
       titulo: "Guía OWASP (Top 10 – 2021)",
       descripcion:
-        "Resumen de las diez vulnerabilidades más críticas de OWASP 2021 y mitigaciones.",
+        "Resumen de las diez vulnerabilidades más críticas según OWASP 2021 y mitigaciones.",
       enlace: "/investigaciones/guia-owasp",
     },
     {

@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Evitar lockfiles fuera de la raíz
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# Permitimos el package-lock.json de la raíz
+# (no ignores el package-lock.json de la raíz)
