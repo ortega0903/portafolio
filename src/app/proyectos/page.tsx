@@ -1,5 +1,5 @@
 "use client";
-import { Container, Grid, Card, CardContent, Typography, Button } from "@mui/material";
+import { Container, Card, CardContent, Typography, Button, Box } from "@mui/material";
 import Link from "next/link";
 
 export default function ProyectosPage() {
@@ -33,9 +33,19 @@ export default function ProyectosPage() {
         Investigaciones y Proyectos
       </Typography>
 
-      <Grid container spacing={4}>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: {
+            xs: '1fr',
+            sm: '1fr 1fr',
+            md: '1fr 1fr 1fr'
+          },
+          gap: 4
+        }}
+      >
         {proyectos.map((proyecto) => (
-          <Grid item xs={12} sm={6} md={4} key={proyecto.id}>
+          <Box key={proyecto.id}>
             <Card
               sx={{
                 height: "100%",
@@ -57,9 +67,9 @@ export default function ProyectosPage() {
                 Ver investigación
               </Button>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Container>
   );
 }
