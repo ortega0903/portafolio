@@ -3,7 +3,6 @@
 import React from 'react';
 import {
   Container,
-  Grid,
   Card,
   CardContent,
   Typography,
@@ -48,56 +47,65 @@ export default function ProyectosPage() {
         </Typography>
       </Box>
 
-      <Grid container spacing={4}>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: {
+            xs: '1fr',
+            sm: '1fr 1fr',
+            md: '1fr 1fr 1fr'
+          },
+          gap: 4
+        }}
+      >
         {researchProjects.map((project) => (
-          <Grid item xs={12} sm={6} md={4} key={project.id} component="div">
-            <Card
-              sx={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                transition: 'all 0.3s ease-in-out',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  boxShadow: (theme) =>
-                    theme.palette.mode === 'dark'
-                      ? '0 8px 25px rgba(0, 0, 0, 0.5)'
-                      : '0 8px 25px rgba(0, 0, 0, 0.1)',
-                },
-              }}
-            >
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
-                  {project.title}
-                </Typography>
+          <Card
+            key={project.id}
+            sx={{
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              transition: 'all 0.3s ease-in-out',
+              '&:hover': {
+                transform: 'translateY(-4px)',
+                boxShadow: (theme) =>
+                  theme.palette.mode === 'dark'
+                    ? '0 8px 25px rgba(0, 0, 0, 0.5)'
+                    : '0 8px 25px rgba(0, 0, 0, 0.1)',
+              },
+            }}
+          >
+            <CardContent sx={{ flexGrow: 1 }}>
+              <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
+                {project.title}
+              </Typography>
 
-                <Typography variant="body2" color="text.secondary" paragraph>
-                  {project.description}
-                </Typography>
+              <Typography variant="body2" color="text.secondary" paragraph>
+                {project.description}
+              </Typography>
 
-                <Typography variant="caption" color="text.secondary" display="block" sx={{ mb: 2 }}>
-                  {project.date}
-                </Typography>
+              <Typography variant="caption" color="text.secondary" display="block" sx={{ mb: 2 }}>
+                {project.date}
+              </Typography>
 
-                <Button
-                  component={Link}
-                  href={project.route}
-                  variant="contained"
-                  color="primary"
-                  fullWidth
-                  sx={{
-                    mt: 'auto',
-                    textTransform: 'none',
-                    fontWeight: 500,
-                  }}
-                >
-                  Ver investigación
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
+              <Button
+                component={Link}
+                href={project.route}
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{
+                  mt: 'auto',
+                  textTransform: 'none',
+                  fontWeight: 500,
+                }}
+              >
+                Ver investigación
+              </Button>
+            </CardContent>
+          </Card>
         ))}
-      </Grid>
+      </Box>
     </Container>
   );
 }
