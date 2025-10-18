@@ -5,21 +5,21 @@ import Link from "next/link";
 export default function ProyectosPage() {
   const proyectos = [
     {
-      id: 1,
+      id: "p1",
       titulo: "Análisis crítico del aseguramiento de la calidad de software",
       descripcion:
         "Estándares ISO/IEC 25010, ISO/IEC/IEEE 29119 y IEEE 730; comparación de modelos y roles QA.",
       enlace: "/investigaciones/aseguramiento-calidad",
     },
     {
-      id: 2,
+      id: "p2",
       titulo: "Guía OWASP (Top 10 – 2021)",
       descripcion:
-        "Resumen de las diez vulnerabilidades más críticas según OWASP 2021 y mitigaciones.",
+        "Resumen de las diez vulnerabilidades más críticas de OWASP 2021 y mitigaciones.",
       enlace: "/investigaciones/guia-owasp",
     },
     {
-      id: 3,
+      id: "p3",
       titulo: "Planes y casos de prueba",
       descripcion:
         "Cómo elaborar planes y casos de prueba con ejemplos funcionales y criterios de aceptación.",
